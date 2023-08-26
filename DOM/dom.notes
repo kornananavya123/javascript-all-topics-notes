@@ -1,0 +1,24 @@
+finding html elements:-
+
+document.getElementById
+document.getElementsByClassName
+document.getElementByTagName
+document.querySelector
+document.querySelectorAll
+
+changing html elements:-
+innerhtml
+style
+src
+attribute
+
+
+
+
+tagname
+const c = document.getElementByTagName('li')
+
+console.log(c)
+
+// query selector
+// the query selector() method 

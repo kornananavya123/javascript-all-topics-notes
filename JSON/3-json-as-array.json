@@ -1,0 +1,25 @@
+[
+    {
+        "name" :"sagar",
+        "address" : "india",
+        "married" : "true",
+        "number" :[10,20,30],
+        "obj" :{}
+    },
+
+    {
+        "name" :"sagar",
+        "address" : "india",
+        "married" : "true",
+        "number" :[10,20,30],
+        "obj" :{}
+    },
+
+    {
+        "name" :"sagar",
+        "address" : "india",
+        "married" : "true",
+        "number" :[10,20,30],
+        "obj" :{}
+    }
+]

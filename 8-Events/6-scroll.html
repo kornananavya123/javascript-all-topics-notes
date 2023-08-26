@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+          height: 300px;
+          width: 400px;
+          overflow: scroll;
+          border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, optio hic tenetur quaerat, quis voluptatem corporis vel sed eveniet vitae voluptatibus illum culpa ex voluptate incidunt dignissimos earum laborum? Culpa!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, culpa, quam vel perspiciatis mollitia, illo voluptates et dolores similique voluptatibus laudantium esse modi veritatis deserunt in natus atque nihil dolor.
+        </div>
+    <script>
+        let div = document.getElementById("d1");
+
+        div.addEventListener("scroll", function(){
+            console.log("im scrolling....", div.scrollTop)
+
+            if(div.scrollTop > 362 && div.scrollTop < 370) {
+                let h1 = document.createElement("h1");
+                console.log("gjkkk")
+                h1.innerText = "you are in middle";
+                document.body.appendChild(h1);
+               
+            }
+        })
+    </script>
+</body>
+</html>
