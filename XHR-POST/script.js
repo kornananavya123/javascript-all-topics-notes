@@ -6,7 +6,9 @@ btn.addEventListener("click",function(){
     let xhr = new XMLHttpRequest();
 
     // 2.you have open api with a GET method
-    xhr.open("GET","https://jsonplaceholder.typicode.com/posts");
+    //xhr.open("GET","https://jsonplaceholder.typicode.com/posts");
+    xhr.open("POST","https://jsonplaceholder.typicode.com/posts");
+
 
     xhr.responseType = "json"
     xhr.setRequestHeader("Content-Type", "appilication/json");
@@ -29,11 +31,12 @@ btn.addEventListener("click",function(){
    });
 
   // 4.you have send the request
-  xhr.send({
+  let body = {
     userId: 11,
-    id: 101,
+    id: 102,
     title:
       "this is my title",
     body: "this is my body",
-  });  
+  };  
+  xhr.send(JSON.stringify(body));
   });
