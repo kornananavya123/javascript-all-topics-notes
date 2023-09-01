@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <h1 class="heading">MyCompany Logo 1 </h1>
+    <h1 class="heading">MyCompany Logo 2 </h1>
+    <h1 class="heading">MyCompany Logo 3</h1>
+
+
+    <p>lorem ipsum color sit amet, consectetur adipicing elit. Blanditiiis, et.</p>
+    <p> lorem ipsum dolor sit</p>
+    <p>navya</p>
+
+    <button id="btn">Click Me</button>
+
+    <script>
+        let  x= $('p')
+       // console.log(x.length)
+
+       // console.log(x[0].textContent)
+       // console.log(x[1].textContent)
+       // console.log(x[2].textContent)
+
+        let btn = $("btn");
+        console.log(btn);
+        console.log(btn.text());
+
+     // in jquery when we give class name we use .(dot)   in id we dont need 
+        let y = $('.heading');  
+        //console.log(y)
+        console.log(y[0].textContent)  // my  company logo 1  textconent means h1 tag inside text
+    </script>
+
+</body>
+</html>
