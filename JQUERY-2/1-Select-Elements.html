@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <h1 id="heading">my company heading</h1>
+
+    <p>Lorem ipsum dolor sit.</p>
+    <p>lorem</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, maxime?</p>
+
+    <button class="btn">button 1</button>
+    <button class="btn">button 2</button>
+    <button class="btn">button 3</button>
+    <button class="btn">button 4</button>
+    <script>
+        console.log("this is my first message")
+        // DOM code
+       // let h1 = document.getElementById("heading");
+       // console.log(h1.innerText);
+
+       // jquery code simple
+     let h1 = $("#heading")  // selected using id
+     console.log(h1.text());
+
+     let pTags = $("p")     // selected using tagname
+     //console.log("line 30 =>", pTags)  // there are 3 p tags 
+     console.log("line 30 =>", pTags[1].textContent)  //first tag
+
+     let buttons = $(".btn");    // selected using className
+     console.log("line 30 ==>", buttons[1].textContent)
+
+    </script>
+
+</body>
+</html>

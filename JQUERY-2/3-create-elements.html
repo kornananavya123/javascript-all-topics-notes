@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    
+   <h1>Heading of My Page</h1>
+
+   <script>
+
+    // let para = document.createElement("p");
+    // para.innerText = " this is my parahraph";
+   // document.body.appendChild(para);
+
+   // let para = $("<p> this is my para</p>");
+   // $("body").append(para);
+
+   let para = $("<p>")
+   para.text (" this is my para")
+   $('body').append(para);
+
+   let ul = $("<ul>")
+
+         let list1 = $("<li>").text("HOME")
+          let list2 = $("<li>").text("ABOUT")  
+            let list3 = $("<li>").text("CONTACT")   
+                let list4 = $("<li>").text("FOLLOW")     
+       
+    ul.append(list1,list2,list3,list4)   
+    $("body").append(ul);     
+
+   </script>
+
+</body>
+</html>

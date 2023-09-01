@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <button id="btn">Fade Out</button>
+    <button id="btn2">Fade In</button>
+
+    <button id="btn3">fade togggle</button>
+
+    <button id="btn4">slideUp</button>
+
+    <button id="btn5">slidetoggle</button>
+
+    <br>
+    <br>
+    
+    <img id="pic" src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg" alt="">
+
+      <script>
+       
+       // setInterval(()=> {
+      //   $("#pic").toggle();
+      //  }, 2000);
+
+       $("#btn").click(function(){
+        $("#pic").fadeOut();
+       })
+
+       $("#btn2").click(function(){
+        $("#pic").fadeIn();
+       })
+        
+        $("#btn3").click(function(){
+        $("#pic").fadeToggle();
+       })
+
+        $("#btn4").click(function(){
+        $("#pic").slideUp();
+       })
+
+       $("#btn5").click(function(){
+        $("#pic").slideToggle();
+       })
+
+   </script>
+
+</body>
+</html>
