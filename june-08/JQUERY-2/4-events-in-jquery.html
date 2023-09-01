@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+       <button id="dom">Click Me</button>
+
+       <button id="btn1"> Button 1</button>
+       <button id="btn2"> Button 2</button>
+       <button id="btn3"> Button 3</button>
+       <button id="btn4"> Button 4</button>
+
+       <input type="text" id="name">
+
+       <script>
+        
+        let btn = document.getElementById("dom");
+        btn.addEventListener("click", function(){
+            alert("button click is handle by dom")
+        })
+
+        $("#btn1").click(function(){
+            //alert("Button is clicked")
+            $("body").css("background-color", "red")
+        })
+
+        $("#btn2").dblclick(function(){
+            //alert("Button is clicked")
+            $("body").css("background-color", "green")
+        })
+
+        $("#btn3").mouseover(function(){
+            //alert("Button is clicked")
+            $("body").css("background-color", "blue")
+        })
+
+        $("#btn4").mouseout(function(){
+            //alert("Button is clicked")
+            $("body").css("background-color", "pink")
+        })
+
+        $("#name").keydown(function(event){
+            console.log(event.key)
+        })
+       </script>
+
+</body>
+</html>
