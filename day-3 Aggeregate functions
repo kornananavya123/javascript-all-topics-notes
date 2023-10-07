@@ -1,0 +1,32 @@
+Alias: alias used “as” which gives printed value to given coloumn name.
+
+Order By: order by is used to make table coloumn in the specific order either in the assending order or descending order.
+Aggregate Function: there are five aggargate function which provide better performance to the databases.
+These are:
+Count(): this will count the no. of the rows in the table.
+sum(): this will gives you sum of integer colomn value.
+max(): this is used for calculating the maximum value in the coloumn.
+avg(): this is used for calculating the average value of the coloumn.
+min(): this is used for calculating the minimum value in the coloumn.
+Group By: group by used for the a group of category which is also used the aggregate function on this group of category.
+Having: having used on this grouped data which is also used this aggregate function.
+ Simply in other words it is used to make operation on this grouped data.
+
+
+ 
+
+ OrderBy:it is used to group the column in particular order according to Int values and ascending and descending order
+
+select * from employee order by <column name>
+Aggregate function:
+1.count:To get the count of the rows->select count(id) from <table name>
+2.sum:To get the sum value of the column->select sum(salary) from <table name>
+3.avg:To get the average value of the column->select avg(salary) from <table name>
+4.max:To get the maximum value of the column->select max(salary) from <table name>
+5.min:To get the minimum value of the column->select min(salary) as min_sales from <table name>
+GroupBy:it is used to group the rows from table based on one or more columns.it also can used to calculate aggregate function by column.
+
+select product ,avg(sales) from product group by product;
+Having:it is used to filter the result of query that includes groupby clause.it will apply some aggregate condition to the data.
+
+select movie avg(rating) from movie group by movies having avg(rating)>6

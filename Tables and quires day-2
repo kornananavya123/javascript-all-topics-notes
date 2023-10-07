@@ -1,0 +1,106 @@
+(1) Show:- To show list of databases
+
+show databases;
+(2) Create:- To create one or multiple new databases.
+
+SYNTAX: create database DataBaseName;
+Example: create database employee;
+(3) Create:- To create one or more table
+
+SYNTAX: create database TableName(properties);
+Example: create database employee(id int, name varchar(20), salary int);
+(4) Use:- This command is to use our created database.
+
+SYNTAX: use DataBaseName;
+Example: use employee;
+(5) Insert:- This command is used for inserting a data into the table.
+
+SYNTAX: insert into TableName(properties);
+Example: insert into employee(id, name, salary)values(101,'Monisha',1000);
+(6) Insert multiple elements:-
+
+SYNTAX: insert into TableName(properties)values(),(),();
+Example: insert into employee(id, name, salary)values(101,'Monisha',1000),(102,'Mythili',2000);
+(7) Select:- It is used to show all the records from table by retrieve/fetch it.
+attribute is used to retrieve only particular attribute name in place of *
+* is used to view all inserted rows
+
+SYNTAX:  select * from TableName;
+EXAMPLE: select * from employee; // Retrieve entire records of table
+         select name, salary from employee; // Atrribute name (column)
+(8) Where:- This command is used to take decision based on its condition.
+→ Logical operators (=, >, <, <=, >=) can be used in ‘Where’ command’s condition.
+→ Commands: not, or, and, between, in, like etc.
+- between command is used to gives ranges in condition
+- in command is used to retrieve only matched records.
+- and command is used when we need both conditions to be true.
+- or command is used when we need anyone condition satisfies retrieve data.
+- like command is used to match records as per the given pattern. (PATTERN MATCH)
+→ Sometimes when condition not satisfies it returns as ‘Empty set’.
+
+SYNTAX:  select * from TableName where condition;
+EXAMPLE: select * from employee where id=105;
+         select * from employee where id=106 and salary=6000; 
+         select * from employee where salary between 4000 and 9000;
+         select * from employee where id=106 and salary=9000; // Empty set
+         select * from employee where salary in(2000,3000,4000);
+         select * from employee where name like 'har_hi%';
+          - If there is missing keyword, then we can use underscore and % for after hi can be anything.
+(9) Describe:- To show current table’s structure gives complete details inside a table.
+We get Field, Type, Null, Key, Default & Extra as attributes/Column Names.
+
+SYNTAX: describe TableName;
+EXAMPLE: describe employee;
+(10) Update:- It is used to update the created table.
+Here where condition is not mandatory to provide all times use it whenever neccessary.
+
+SYNTAX: update TableName set condition1 where condition2;
+EXAMPLE: update employee set salary=5000 where id=112;
+(11) Limit :- To get first few (5) records.
+
+SYNTAX: select * from TableName limit numberOfRecords;
+EXAMPLE: select * from employee limit 5;
+(12) Offset:- This command leaves (how many records we need to not taken into account) & provides records after that according to limit of records.
+
+SYNTAX: select * from TableName limit noOfRecords offset collectRecordsAfter;
+EXAMPLE: select * from employee limit 2 offset 2;
+(13) Count:- To know the count of records inside a table. Here * means how many rows we have currently in this table.
+
+SYNTAX: select count (*) from TableName;
+EXAMPLE: select count (*) from employee;
+(14) Alter:- To change (add/delete) the records from table.
+
+SYNTAX: alter table TableName add column ColumnName NewColumnType; => To add a column
+        alter table TableName drop column ColumnName; => To delete a column
+EXAMPLE:  alter table employee add column isActive boolean; // To add a new column in table
+          update employee set isActive= true; [OR] update employee set isActive= true where id = 112;
+          alter table employee drop column isActive; // To delete a new column from table.
+(15) Delete: To delete table’s content / entire content of a table.
+
+SYNTAX: delete from TableName where (particular record's property with its value);
+EXAMPLE:  delete from employee where id=120;
+          delete from employee; // To delete entire table
+(16) Drop: To delete entire table and database from list of databases.
+
+SYNTAX: drop table TableName;
+        drop database DatabaseName;
+EXAMPLE: drop table employee;
+         drop database employee;
+
+
+
+here are some of commands which we discuss yesterday class ===>
+
+create = by using this command we create new table , new database store.
+describe = by using this command we can see all details of our database.
+insert = this command for inserting something.
+select = select for retrieving data.
+where = this command for specify place
+update= its for updating information in database or table.
+alter= its for add more column.
+limit = its shows those value we select.
+use database= select working database.
+count = its count all rows.
+deleting = its for deleting content.
+show table= for show our created table.
+

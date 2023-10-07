@@ -1,0 +1,67 @@
+What is PK and FK ? How to create PK and FK after creating a table?
+What is JOIN ?
+Types of Join ?
+
+Ans1:- . Primary Key: A primary key is a column or set of columns in a table that uniquely identifies each row
+ in that table.
+ It ensures that each row has a unique identifier, 
+and no two rows can have the same primary key value.
+ The primary key serves as the main way to identify and access individual records in the table. 
+ In most databases, primary keys are also used as the basis for creating indexes, 
+ which improve data retrieval performance.Unique identifier for each row in a table,
+  ensures uniqueness and serves as a basis for data retrieval.
+
+For example, in a “Customers” table, the “CustomerID” column could be the primary key. 
+Each customer would have a unique ID, and this ID would uniquely identify each customer record in the table.
+
+CREATE TABLE Customers (
+    CustomerID SERIAL PRIMARY KEY,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+);
+
+Foreign Key: A foreign key is a column or set of columns in a table that establishes a link or 
+relationship between the data in two tables. It creates a reference from one table’s primary key to another
+ table’s primary key. The foreign key enforces referential integrity, meaning that the values in 
+ the foreign key column(s) must match a primary key in the referenced table or be null.Column(s) in a table 
+ that references the primary key of another table, establishing relationships between tables and maintaining 
+ data integrity.
+Continuing with the “Customers” example, imagine a separate “Orders” table. 
+The “CustomerID” column in the “Orders” table could be a foreign key that references
+ the “CustomerID” primary key in the “Customers” table. This indicates 
+ that each order is associated with a specific customer.
+
+CREATE TABLE Orders (
+    OrderID SERIAL PRIMARY KEY,
+    CustomerID INT REFERENCES Customers(CustomerID),
+    OrderDate DATE,
+);
+
+Using primary keys and foreign keys in database design helps create meaningful and structured relationships between tables, 
+enabling efficient querying, data integrity enforcement, and accurate representation of real-world associations.
+
+Ans2:- In the context of relational databases, a join is an operation that combines data from two or more
+ tables based on a related column between them. 
+ The purpose of a join is to retrieve data that is distributed across multiple tables
+  and present it as a unified result set, often by leveraging the relationships defined 
+  through primary keys and foreign keys.
+
+Joins allow you to combine data from different tables to answer more complex questions or retrieve more comprehensive information than what a single table can provide. They are a fundamental part of querying and analyzing data in relational databases. Joining tables allows you to aggregate data, filter results, and answer complex questions that involve information from multiple related sources. The columns used for joining are typically the primary keys and foreign keys that establish the relationships between tables.
+Ans3:- There are several types of joins, each serving a specific purpose:
+
+Inner Join: An inner join returns only the rows that have matching values in both tables.
+ It combines rows from two tables based on a specified column or columns, discarding rows with no matching 
+ counterparts in the other table.
+
+Left Join (or Left Outer Join): A left join returns all the rows from the left table and the matching rows from 
+the right table. If there is no match, the result will contain null values for the columns from the right table.
+
+Right Join (or Right Outer Join): A right join is similar to a left join but returns all the rows from 
+the right table and the matching rows from the left table. If there is no match, the result will contain 
+null values for the columns from the left table.
+
+Full Outer Join: A full outer join returns all the rows from both tables, with matching rows combined 
+and non-matching rows filled with null values for the respective columns.
+
+Self Join: A self join is a join where a table is joined with itself. 
+This can be useful when you have hierarchical data or when you want to compare rows within the same table.

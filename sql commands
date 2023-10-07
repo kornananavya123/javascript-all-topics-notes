@@ -1,0 +1,14 @@
+COMMANDS :-
+
+create = by using this command we create new table , new database store.
+describe = by using this command we can see all details of our database.
+insert = this command for inserting something.
+select = select for retrieving data.
+where = this command for specify place
+update= its for updating information in database or table.
+alter= its for add more column.
+limit = its shows those value we select.
+use database= select working database.
+count = its count all rows.
+deleting = its for deleting content.
+show table= for show our created table.

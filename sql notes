@@ -1,0 +1,116 @@
+DBMS
+->What is DBMS?
+A: 
+-> A database management system (DBMS) is system software for creating and managing databases. 
+-> A DBMS makes it possible for end users to create, protect, read, update and delete data in a database.
+-> It essentially serves as an interface between databases and users or application programs, ensuring that data is consistently organized and remains easily accessible.
+
+*  What does a DBMS do?
+-> DBMS manages the data; the database engine allows data to be accessed (read), locked and modified; and the database schema defines the database's logical structure.
+-> These three foundational elements help provide concurrency, security, data integrity and uniform data administration procedures.
+-> The DBMS supports many typical database administration tasks, including change management, performance monitoring and tuning, security, and backup and recovery.
+-> Most database management systems are also responsible for automated rollbacks and restarts as well as logging and auditing of activity in databases and the applications that access them.
+-> The DBMS provides a centralized view of data that can be accessed by multiple users from multiple locations in a controlled manner.
+-> A DBMS can limit what data end users see and how they view the data, providing many views of a single database schema.
+-> End users and software programs are free from having to understand where the data is physically located or on what type of storage medium it resides because the DBMS handles all requests.
+-> The DBMS can offer both logical and physical data independence to protect users and applications from having to know where data is stored or from being concerned about changes to the physical structure of data.
+-> So long as programs use the application programming interface (API) for the database that the DBMS provides, developers won't have to modify programs just because changes have been made to the database.
+-> Popular database models and management systems include RDBMS, NoSQL DBMS, NewSQL DBMS, in-memory DBMS, columnar DBMS, multi-model DBMS and cloud DBMS.
+
+Components of  DBMS:-
+-> Storage engine
+-> Metadata catolog
+-> Database Access Language
+-> Optimization engine
+-> Query Processor
+-> Lock Manager
+-> Log Manager
+-> Data Utilities
+
+Q2: What is SQL and NoSQL?
+A: 
+* SQL ( Structured Query Language): [Only in TABLE FORMAT]
+   -> It is used to manage data stored in relational databases like MySQL, MS Access, SQL Server, Oracle, Sybase, Informix, Postgres etc.
+   -> SQL is a database computer language designed for the retrieval and management of data in a relational databases
+  -> SQL was developed in the 1970s by IBM Computer Scientists/Researchers.
+  -> It is used to operate on the data stored in a database. SQL depends on relational algebra and tuple relational calculus.
+  -> SQL is not a database management system, but it is a query language which is used to store and retrieve the data from a database or SQL is a language that communicates with databases.
+  -> SQL makes it easy to manipulate this data using simple DML (Data Manipulation Language) Statements.
+  -> Eg:-
+             SELECT * FROM CUSTOMERS WHERE country = 'USA';
+
+      Here 
+                           *  -> retrieve every columns from CUSTOMERS table
+               WHERE -> used to filter records & to extract only those records that fulfill a specified condition.
+   country = 'USA' -> This is the condition for WHERE clause says only fetch records (row) with country attribute information (column) as USA and show us.
+
+* NoSQL ( Not only Structured Query Language): [Except TABLE FORMAT]
+  -> NoSQL databases are purpose built for specific data models and have flexible schemas for building modern applications.
+  -> NoSQL databases are widely recognized for their ease of development, functionality, and performance at scale.
+  -> It is a Non-Relational Database which just stores data differently compared to an RDBMS.
+  -> The decision to use a relational database versus a non-relational database is largely contextual, and it varies depending on the use case.
+  -> We know that MongoDB & much more are NoSQL Database, so it is very necessary to know about NoSQL Database to understand MongoDB throughly.
+  -> It is generally used to store big data and real-time web applications.
+  -> It provides a mechanism for storage and retrieval of data other than tabular relations model used in relational databases.
+  -> In a NoSQL database, a book record is usually stored as a JSON document. 
+  -> In this model, data is optimized for intuitive development and horizontal scalability.
+  -> This databases use a variety of data models which is optimized specifically for applications that require large data volume, low latency, and flexible data models, which are achieved by relaxing some of the data consistency restrictions of other databases.
+  -> Some examples of NoSQL database system with their category are:
+         -      MongoDB, CouchDB, Cloudant (Document-based)
+         -      Memcached, Redis, Coherence (key-value store)
+         -      HBase, Big Table, Accumulo (Tabular)
+  -> Advantages of NoSQL
+        -      It supports query language.
+        -      It provides fast performance.
+        -      It provides horizontal scalability.
+        -      High Scalability
+                        NoSQL can handle an extensive amount of data because of scalability. If the data grows, NoSQL database scale it to handle that data in an efficient manner.
+       -      High Availability
+                       NoSQL supports auto replication. Auto replication makes it highly available because, in case of any failure, data replicates itself to the previous consistent state.
+
+ -> Disadvantage of NoSQL
+      -      Open source
+                      NoSQL is an open-source database, so there is no reliable standard for NoSQL yet.
+      -      Management challenge
+                      Data management in NoSQL is much more complicated than relational databases. It is very challenging to install and even more hectic to manage daily.
+     -       GUI is not available
+                      GUI tools for NoSQL database are not easily available in the market.
+     -       Backup
+                      Backup is a great weak point for NoSQL databases. Some databases, like MongoDB, have no powerful approaches for data backup.
+
+Q3: What is Database, Table, Row and Columns?
+A:
+      * Database:
+            -> A database is an organized collection of data, so that it can be easily accessed and managed.
+            -> The main purpose of the database is to operate a large amount of information by storing, retrieving, and managing data.
+            -> There are many dynamic websites on the World Wide Web nowadays which are handled through databases. For example, a model that checks the availability of rooms in a hotel. It is an example of a dynamic website that uses a database.
+            -> There are many databases available like MySQL, Sybase, Oracle, MongoDB, Informix, PostgreSQL, SQL Server, etc.
+            -> Modern databases are managed by the database management system (DBMS).
+            -> A cylindrical structure is used to display the image of a database.
+            -> Databases can be divided in 3 types:
+                   (1) RDBMS (Relational Database Management System)
+                   (2) OLAP (Online Analytical Processing)
+                   (3) NoSQL (recently developed database)
+     * Row
+        => A row is defined as a horizontal arrangement of things. 
+        => They spread from left to right. It is said to be the group of cells that are arranged horizontally to provide consistency. 
+        => In a spreadsheet, rows are represented by the numbers written on the left-hand side. 
+        => The total of the row values is shown at the extreme right. 
+        => A row is an order where figures or objects are placed in a straight line. And arrangement of rows placed horizontally form left to right.
+        => In the DBMS, rows are called records that contain fields. 
+        => Each row has a unique number that represents it. 
+        => In Microsoft excel, there are 1,048,576 numbers of rows. 
+        => Examples of a row include the seats of a classroom in a school; seats of a movie theatre are allotted as 'row number 2 seat number 101', etc.
+        => The arrangement of data in the form of rows makes the data convenient, prominent, and understandable for the user. 
+   
+     * Column
+        => The column is defined as a vertical arrangement of things. 
+        => It is said to be the group of cells that are aligned vertically. 
+        => In the DBMS, columns are called fields that contain the collection of characters. 
+        => They spread from top to bottom. 
+        => The alphabet generally represents the headings of columns. 
+        => The total of column values is shown at the extreme bottom.
+
+
+
+image

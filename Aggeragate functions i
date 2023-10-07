@@ -1,0 +1,15 @@
+OrderBy:it is used to group the column in particular order according to Int values and ascending and descending order
+
+select * from employee order by <column name>
+Aggregate function:
+1.count:To get the count of the rows->select count(id) from <table name>
+2.sum:To get the sum value of the column->select sum(salary) from <table name>
+3.avg:To get the average value of the column->select avg(salary) from <table name>
+4.max:To get the maximum value of the column->select max(salary) from <table name>
+5.min:To get the minimum value of the column->select min(salary) as min_sales from <table name>
+GroupBy:it is used to group the rows from table based on one or more columns.it also can used to calculate aggregate function by column.
+
+select product ,avg(sales) from product group by product;
+Having:it is used to filter the result of query that includes groupby clause.it will apply some aggregate condition to the data.
+
+select movie avg(rating) from movie group by movies having avg(rating)>6

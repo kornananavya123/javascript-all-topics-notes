@@ -1,0 +1,55 @@
+What is ER Diagram ?
+What is Transaction ? ACID Properties ?
+
+
+Ans1):- An Entity-Relationship (ER) diagram is a visual representation that depicts the relationships among entities (objects or concepts) within a database. It’s a modeling technique used in database design to illustrate the structure of a database system and the connections between various entities, their attributes, and the relationships between them.
+
+ER diagrams use standardized symbols to represent different elements in a database:
+
+Entities: Entities are objects or concepts that have data to be stored in the database. Each entity is typically represented as a rectangle with its name inside. For example, “Customer,” “Product,” “Employee” are entities.
+Attributes: Attributes are properties or characteristics of entities. They are depicted as ovals connected to the respective entity rectangle. For example, a “Customer” entity might have attributes like “CustomerID,” “FirstName,” “LastName.”
+3.Relationship: A relationship represents an association between two or more entities. Relationships can have roles (describing the participation of entities) and cardinality (defining the number of related entities). There are different types of relationships:
+1. One-to-One (1:1) Relationship:
+* Entities A and B are connected by a single line.
+* A single entity in A is associated with at most one entity in B, and vice versa.
+* Example: An “Employee” can have one “Desk,” and a “Desk” is assigned to only one
+“Employee.”
+2. One-to-Many (1:N) Relationship:
+* Entities A and B are connected by a line, where A has a crow’s foot or similar symbol at its
+end.
+* An entity in A can be associated with multiple entities in B, but an entity in B is associated
+with at most one entity in A.
+* Example: A “Department” can have multiple “Employees,” but an “Employee” belongs to
+only one “Department.”
+3. Many-to-One (N:1) Relationship:
+* Similar to One-to-Many, but with the crow’s foot or symbol at the end of entity B’s side.
+* Multiple entities in A are associated with a single entity in B.
+* Example: Multiple “Students” can belong to a single “Course.”
+4. Many-to-Many (N:N) Relationship:
+* Entities A and B are connected by a line, and both ends have crow’s foot or similar
+symbols.
+* Multiple entities in A are associated with multiple entities in B.
+* This relationship is often implemented using an associative entity or table in the
+database.
+* Example: “Students” can enroll in multiple “Courses,” and each “Course” can have
+multiple “Students.”
+
+Ans2):- A transaction in the context of databases refers to a logical unit of work that consists of one or more database operations. These operations are executed as a single, indivisible unit, ensuring that either all of them are successfully completed or none of them are applied. Transactions are a fundamental concept in database management systems (DBMS) to ensure data consistency, integrity, and reliability.
+
+Transactions are designed to maintain the accuracy and reliability of the database even in the presence of system failures, errors, or concurrent access by multiple users. The ACID properties are used to describe the key characteristics of a transaction:
+
+Atomicity: This property ensures that a transaction is treated as a single, indivisible unit of work. Either all the operations within the transaction are executed, or none of them are. If any part of the transaction fails, the entire transaction is rolled back to its original state.
+
+Consistency: Transactions bring the database from one consistent state to another. This means that the data before and after the transaction must adhere to the defined rules and constraints. The database should always be in a valid state, regardless of any transaction outcomes.
+
+Isolation: Transactions are isolated from each other, meaning that the operations of one transaction are not visible to other transactions until the first transaction is completed. This isolation prevents interference and ensures that concurrent transactions do not affect each other’s outcomes.
+
+Durability: Once a transaction is successfully completed, its changes are permanent and are saved in the database even in the event of system failures or crashes. Durability ensures that committed changes are not lost.
+
+Transactions are used to encapsulate groups of operations that need to be executed together to maintain data integrity. For example, consider a money transfer scenario where money is deducted from one account and added to another. To maintain data consistency, this operation must be treated as a transaction to ensure that if the deduction succeeds, the addition also succeeds.
+
+In database management systems, transactions are typically managed using programming constructs or SQL statements. The BEGIN TRANSACTION, COMMIT, and ROLLBACK statements are commonly used to initiate, confirm, and cancel transactions, respectively.
+
+Overall, transactions are a critical component of database systems, enabling reliable and consistent manipulation of data in various application scenarios while adhering to the principles of data integrity and correctness.
+
+

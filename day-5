@@ -1,0 +1,86 @@
+What is Indexing ?
+What is views ?
+Experiment with PK and FK ?
+
+Ans:-1) Indexing in the context of databases is a technique used to optimize the retrieval and querying of data from tables. 
+An index is a data structure that provides a quick and efficient way to locate rows in a table based on 
+the values in one or more columns. Just like an index in a book helps you quickly find a specific topic, 
+a database index helps the database management system (DBMS) quickly locate the rows that match specific criteria.
+
+Indexes significantly improve the performance of database operations, especially when dealing with large datasets, 
+by reducing the need for the DBMS to scan the entire table to find the required data. Without indexes, 
+the DBMS might need to perform full table scans, which can be slow and resource-intensive for complex queries.
+indexing is a vital optimization technique in databases that helps enhance data retrieval speed and query 
+performance, making it possible to efficiently work with large volumes of data without sacrificing responsiveness.
+
+Here’s a simple example to illustrate the concept:
+Suppose you have a “Products” table with thousands of rows, and you often need to retrieve products based on 
+their “Category” column. By creating an index on the “Category” column, the DBMS can quickly locate and 
+retrieve the rows that match a specific category, improving query performance significantly.
+
+**Ans2):-** In the context of databases, a view is a virtual table created by executing a predefined query on 
+one or more existing tables or views. Unlike physical tables, views do not store data themselves; instead, 
+they provide a way to present data from underlying tables in a specific, customized manner.
+ Views allow users to simplify complex queries, hide sensitive information, and provide a more organized 
+ representation of data. views provide a way to create a customized, simplified, and secure representation of 
+ data in a database. They help users retrieve meaningful information while abstracting the complexity of 
+ underlying tables and queries.
+
+Ans3):-
+a simple example of creating and using primary keys and foreign keys in a relational database. 
+Let’s consider a scenario involving two tables: “Students” and “Courses.”
+
+1. Create the “Students” Table:
+
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50)
+);
+In this example, the “StudentID” column is the primary key that uniquely identifies each student.
+
+2. Create the “Courses” Table:
+
+CREATE TABLE Courses (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(50)
+);
+Here, the “CourseID” column is the primary key for the “Courses” table.
+
+3. Add Foreign Key in “Students” Table:
+
+Let’s say we want to associate students with the courses they are enrolled in. We’ll add a foreign key in 
+the “Students” table that references the “CourseID” column in the “Courses” table.
+
+ALTER TABLE Students
+ADD COLUMN EnrolledCourseID INT,
+ADD FOREIGN KEY (EnrolledCourseID) REFERENCES Courses(CourseID);
+4. Insert Data:
+
+Now, let’s insert some data into both tables:
+
+INSERT INTO Students (StudentID, FirstName, LastName, EnrolledCourseID)
+VALUES (1, 'John', 'Doe', 101);
+
+INSERT INTO Students (StudentID, FirstName, LastName, EnrolledCourseID)
+VALUES (2, 'Jane', 'Smith', 102);
+
+INSERT INTO Courses (CourseID, CourseName)
+VALUES (101, 'Mathematics');
+
+INSERT INTO Courses (CourseID, CourseName)
+VALUES (102, 'Science');
+5. Query Using Primary and Foreign Keys:
+
+You can now use primary and foreign keys to retrieve meaningful information and establish relationships 
+between tables.
+
+For example, to retrieve a list of students along with the names of their enrolled courses:
+
+SELECT Students.FirstName, Students.LastName, Courses.CourseName
+FROM Students
+JOIN Courses ON Students.EnrolledCourseID = Courses.CourseID;
+This query uses a JOIN to combine data from both tables based on the relationship established by the foreign key.
+
+In this example, the primary key “StudentID” in the “Students” table is referenced by the foreign key 
+“EnrolledCourseID,” creating a relationship between students and their enrolled courses.
